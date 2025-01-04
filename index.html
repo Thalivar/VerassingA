@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Special Gift</title>
+    <link rel="stylesheet" type="text/css" href="css/verassing.css">
+
+</head>
+
+<body>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+
+    <div id="mainMenu" class="screen active">
+        <canvas id="flowerCanvas"></canvas>
+        <img src="assets/cinamonrol.gif" class="menu-gif" alt="Deciratuve gif">
+        <h1>Welcome to your special Christmas gift baby!</h1>
+        <button onclick="app.showScreen('paragraphScreen')">Next Page</button>
+    </div>
+
+    <div id="paragraphScreen" class="screen">
+        <div class="paper-texture">
+            <p class="love-message">
+                Hello Amanda,<br><br>
+
+                It's that magical time of the year again, the season of Christmas trees, twinkling lights, and cozy nights. Although this isn't the first Christmas i get to spend with you, this one feels even more special. It's different because I'm here now, not just for a vacation like last year, but to attend college and start building a life here, our life.<br><br>
+                
+                I just want to take a moment to remind you of how much you mean to me. You are my everything. the love of my life, and the person who makes my world brighter every single day. As i already told you before living with you feels so natural, like I've finally found my true 'home'.<br><br>
+                
+                Because, for me, home isn't just four walls and a roof, it's a feeling. And that feeling is you. You make me feel safe, loved, and at peace no matter what challenges I'm facing. You're the person who turns even the hardest days into something beautiful, and for that I'm endlessly grateful.<br><br>
+                
+                Love to me is waking up every day and knowing you're there, my best friend, my partner, my everything. It's found in the quiet moments we share, the big adventures we embark on, the laughter we create together, and even during the challenges we face side by side. You make every part of life better, and I'm so lucky to have you.<br><br>
+                
+                Although i know the past few months haven't been the easiest for you, especially with everything you've had to deal with during chem, i want you to know how proud i am of you. Being able to still do the things and finish the class through so many unfortunate events, is something you should be proud of. And now look at the end it all ended up turning out good. Just like i knew it would.<br><br>
+                
+                Here's to our Christmas and all the ones yet to come, I'm so excited for all the memories we'll create and the dreams that we'll bring to life together.<br><br>
+                
+                <span class="signature">-Enrico Jeroense</span>
+            </p>
+        </div>
+        <button onclick="app.showScreen('giftScreen')">Next Page</button>
+    </div>
+
+    <div id="giftScreen" class="screen">
+        <div class="gift-container">
+            <img src="assets/pinkpresent.gif" class="gift-gif" onclick="app.revealGift()" alt="Present gif">
+            <div class="gift-message">
+                <p>Although I wish I could surprise you with a physical gift right now, I know how much you value finding something that truly feels like "you." And, knowing you, I'd never want to risk picking something that doesn't match your style or preferences.</p>
+                <br>
+                <p>So instead, I wanted to give you something more personal something you can choose yourself. Consider this letter a redeemable coupon for a piece of jewelry of your choice. Whether it's something simple or something bold, I want it to be as special and unique as you are.</p>
+            </div>
+        </div>
+        <button onclick="app.showScreen('mainMenu')" class="return-button">Back to the start</button>
+    </div>
+
+    <script>
+        window.onerror = function(msg, url, LineNo, columnNo, error){
+            alert("Error: " + msg + "\n" + url + "\n" + LineNo + "\n" + columnNo + "\n" + error);
+            return false;
+        };
+    </script>
+    <script src="js/verassing.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try{
+                window.app = new App();
+            } catch(e){
+                console.error('Failed to initialize app', e);
+            }
+        });
+    </script>
+</body>
+</html>
